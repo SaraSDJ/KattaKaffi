@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?b3vt93');
+  src:  url('../fonts/icomoon.eot?b3vt93#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?b3vt93') format('truetype'),
+    url('../fonts/icomoon.woff?b3vt93') format('woff'),
+    url('../fonts/icomoon.svg?b3vt93#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e900";
+  color: #863D08;
+  margin-right: 10px;
+  font-size: 22px;
+}
+.icon-location2:before {
+  content: "\e948";
+  color: #863D08;
+  margin-right: 10px;
+  font-size: 22px;
+}
+.icon-mug:before {
+  content: "\e9a2";
+  color: #863D08;
+  margin-right: 10px;
+  font-size: 22px;
+}
+.icon-star-full:before {
+  content: "\e9d9";
+  color: #863D08;
+  margin-right: 10px;
+  font-size: 24px;
+}
+.icon-heart:before {
+  content: "\e9da";
+  color: #863D08;
+  margin-right: 10px;
+  font-size: 22px;
+}
