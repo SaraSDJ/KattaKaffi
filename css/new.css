@@ -1,374 +1,172 @@
-:root {
-	--nc-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--nc-font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
-
-	/* Light theme */
-	--nc-tx-1: #000000;
-	--nc-tx-2: #1A1A1A;
-	--nc-bg-1: #FFFFFF;
-	--nc-bg-2: #F6F8FA;
-	--nc-bg-3: #E5E7EB;
-	--nc-lk-1: #0070F3;
-	--nc-lk-2: #0366D6;
-	--nc-lk-tx: #FFFFFF;
-	--nc-ac-1: #FFB25A;
-	--nc-ac-tx: #000;
-
-	/* Dark theme */
-	--nc-d-tx-1: #ffffff;
-	--nc-d-tx-2: #eeeeee;
-	--nc-d-bg-1: #000000;
-	--nc-d-bg-2: #111111;
-	--nc-d-bg-3: #222222;
-	--nc-d-lk-1: #3291FF;
-	--nc-d-lk-2: #0070F3;
-	--nc-d-lk-tx: #FFFFFF;
-	--nc-d-ac-1: #863D08;
-	--nc-d-ac-tx: #FFFFFF;
+:root{--nc-font-sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Open Sans','Helvetica Neue',sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";--nc-font-mono:Consolas,monaco,'Ubuntu Mono','Liberation Mono','Courier New',Courier,monospace;--nc-tx-1:#000000;--nc-tx-2:#1A1A1A;--nc-bg-1:#FFFFFF;--nc-bg-2:#F6F8FA;--nc-bg-3:#E5E7EB;--nc-lk-1:#0070F3;--nc-lk-2:#0366D6;--nc-lk-tx:#FFFFFF;--nc-ac-1:#FFB25A;--nc-ac-tx:#000;--nc-d-tx-1:#ffffff;--nc-d-tx-2:#eeeeee;--nc-d-bg-1:#000000;--nc-d-bg-2:#111111;--nc-d-bg-3:#222222;--nc-d-lk-1:#3291FF;--nc-d-lk-2:#0070F3;--nc-d-lk-tx:#FFFFFF;--nc-d-ac-1:#863D08;--nc-d-ac-tx:#FFFFFF}
+@media (prefers-color-scheme:light){
+:root{--nc-tx-1:var(--nc-d-tx-1);--nc-tx-2:var(--nc-d-tx-2);--nc-bg-1:var(--nc-d-bg-1);--nc-bg-2:var(--nc-d-bg-2);--nc-bg-3:var(--nc-d-bg-3);--nc-lk-1:var(--nc-d-lk-1);--nc-lk-2:var(--nc-d-lk-2);--nc-lk-tx:var(--nc--dlk-tx);--nc-ac-1:var(--nc-d-ac-1);--nc-ac-tx:var(--nc--dac-tx)}
 }
-
-@media (prefers-color-scheme: light) {
-	:root {
-		--nc-tx-1: var(--nc-d-tx-1);
-		--nc-tx-2: var(--nc-d-tx-2);
-		--nc-bg-1: var(--nc-d-bg-1);
-		--nc-bg-2: var(--nc-d-bg-2);
-		--nc-bg-3: var(--nc-d-bg-3);
-		--nc-lk-1: var(--nc-d-lk-1);
-		--nc-lk-2: var(--nc-d-lk-2);
-		--nc-lk-tx: var(--nc--dlk-tx);
-		--nc-ac-1: var(--nc-d-ac-1);
-		--nc-ac-tx: var(--nc--dac-tx);
-	}
+address,area,article,aside,audio,blockquote,datalist,details,dl,fieldset,figure,form,iframe,input,meter,nav,ol,optgroup,option,output,p,pre,progress,ruby,table,textarea,ul,video{margin-bottom:1rem}
+button,html,input,select{font-family:var(--nc-font-sans)}
+::selection{background:var(--nc-ac-1);color:var(--nc-ac-tx)}
+h4,h5,h6{margin-bottom:.3rem}
+h3{font-size:1.55rem}
+h4{font-size:1.25rem}
+h5{font-size:1rem}
+h6{font-size:.875rem}
+a{color:var(--nc-lk-1)}
+a:hover{color:var(--nc-lk-2)}
+abbr:hover{cursor:help}
+blockquote{padding:1.5rem;background:var(--nc-bg-2);border-left:5px solid var(--nc-bg-3)}
+abbr{cursor:help}
+blockquote :last-child{padding-bottom:0;margin-bottom:0}
+header{background:#ffe7d5;padding-bottom:1.5em}
+header>:first-child{margin-top:0;padding-top:0}
+header>:last-child{margin-bottom:0}
+a button,button,input[type=button],input[type=reset],input[type=submit]{font-size:1rem;display:inline-block;padding:6px 12px;text-align:center;text-decoration:none;white-space:nowrap;background:#ffb25a;color:var(--nc-lk-tx);border:0;border-radius:4px;box-sizing:border-box;cursor:pointer;color:#000}
+a button[disabled],button[disabled],input[type=button][disabled],input[type=reset][disabled],input[type=submit][disabled]{cursor:default;opacity:.5;cursor:not-allowed}
+.button:enabled:hover,.button:focus,button:enabled:hover,button:focus,input[type=button]:enabled:hover,input[type=button]:focus,input[type=reset]:enabled:hover,input[type=reset]:focus,input[type=submit]:enabled:hover,input[type=submit]:focus{background:var(--nc-lk-2)}
+code,kbd,pre,samp{font-family:var(--nc-font-mono)}
+code,kbd,pre,samp{background:var(--nc-bg-2);border:1px solid var(--nc-bg-3);border-radius:4px;padding:3px 6px;font-size:.9em}
+kbd{border-bottom:3px solid var(--nc-bg-3)}
+pre{padding:1rem 1.4rem;max-width:100%;overflow:auto}
+pre code{background:inherit;font-size:inherit;color:inherit;border:0;padding:0;margin:0}
+code pre{display:inline;background:inherit;font-size:inherit;color:inherit;border:0;padding:0;margin:0}
+details{padding:.6rem 1rem;background:var(--nc-bg-2);border:1px solid var(--nc-bg-3);border-radius:4px}
+summary{cursor:pointer;font-weight:700}
+details[open]{padding-bottom:.75rem}
+details[open] summary{margin-bottom:6px}
+details[open]>:last-child{margin-bottom:0}
+dt{font-weight:700}
+dd::before{content:'→ '}
+fieldset{margin-top:1rem;padding:2rem;border:1px solid var(--nc-bg-3);border-radius:4px}
+legend{padding:auto .5rem}
+table{border-collapse:collapse;width:100%;margin:auto;position:relative;bottom:20px}
+td,th{border:1px solid #ffe7d5;text-align:left;padding:.5rem}
+th{background:#ffe7d5;color:#000}
+tr:nth-child(even){background:#ffe7d5;color:#000}
+table caption{font-weight:700;font-size:1.3em;margin-bottom:.5rem}
+textarea{max-width:100%}
+ol,ul{padding-left:2rem}
+li{margin-top:.4rem}
+ol ol,ol ul,ul ol,ul ul{margin-bottom:0}
+mark{padding:3px 6px;background:var(--nc-ac-1);color:var(--nc-ac-tx)}
+input,select,textarea{padding:6px 12px;margin-bottom:.5rem;background:var(--nc-bg-2);color:var(--nc-tx-2);border:1px solid var(--nc-bg-3);border-radius:4px;box-shadow:none;box-sizing:border-box}
+body{font-family:rokkitt,serif;font-style:normal;background:#863d08;margin:0}
+footer,main{padding:0 1rem}
+h1,h2,h3{font-variant:small-caps}
+.sida{background:#ffe7d5;color:#000}
+.heim{font-weight:700;color:#ffe7d5;text-align:center;font-size:4em;padding-top:3em;padding-bottom:3em}
+.col-1{display:grid;grid-template-columns:1fr;row-gap:1rem}
+.col-2{display:flex;flex-direction:column-reverse;padding-bottom:3em}
+.col-1 h2,.col-2 h2{font-size:2.5em}
+.col-1 p,.col-2 p{font-size:1.3em}
+.col-1 img,.col-2 img{max-width:300px;border:2px solid #000;border-radius:8px}
+iframe{max-width:300px;max-height:300px;padding-top:1.5em}
+.copy{text-align:center;color:#ffe7d5}
+footer{display:grid;grid-template-columns:1fr;padding-bottom:2em;color:#ffe7d5;text-align:center}
+#klikk{display:none}
+.valmynd{display:grid;grid-template-columns:1fr;text-align:center;max-height:0;overflow:hidden;transition:1s all}
+.valmynd a{text-decoration:none;color:#863d08;padding:.5rem;font-weight:700}
+.footerval a:hover,.valmynd a:hover{color:#ffb25a}
+#klikk:checked~.valmynd{max-height:200px}
+label{color:#000}
+.footerval{text-align:center;padding-top:4em}
+.footerval a{text-decoration:none;color:#ffe7d5;padding:.5rem;font-weight:700;margin:.5em}
+.footer-col{display:grid;grid-template-columns:1fr;row-gap:1em}
+.logoheim{max-width:40%;padding-left:7.5em;position:relative;bottom:230px;animation:logo 2s ease-in-out}
+.logo{max-width:20%}
+@keyframes logo{
+0%{transform:translateY(300px);opacity:0}
+100%{transform:translateY(0);opacity:1}
 }
-
-
-
-address,
-area,
-article,
-aside,
-audio,
-blockquote,
-datalist,
-details,
-dl,
-fieldset,
-figure,
-form,
-input,
-iframe,
-meter,
-nav,
-ol,
-optgroup,
-option,
-output,
-p,
-pre,
-progress,
-ruby,
-table,
-textarea,
-ul,
-video {
-	/* Margins for most elements */
-	margin-bottom: 1rem;
+.title{display:flex;flex-direction:column-reverse;font-weight:700;color:#ffe7d5;font-size:3em;padding:0 1rem}
+.col-3,.col-4,.col-5,.col-6{display:grid;grid-template-columns:1fr}
+.col-3 img,.col-4 img,.col-5 img,.col-6 img{max-width:300px;border-radius:8px}
+.sedill{text-align:center;padding-top:1em;font-size:2em;font-weight:700}
+.title{animation:title 2s ease-in-out}
+@keyframes title{
+0%{transform:translate(-600px)}
+100%{transform:translate(0)}
 }
-
-html,input,select,button {
-	/* Set body font family and some finicky elements */
-	font-family: var(--nc-font-sans);
+.col-6{padding-bottom:7em}
+.popup{position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;display:none;height:500px;width:440px;background:#cd5534;z-index:1}
+.lbl{display:block;width:90px;height:60px;background-color:#ffb25a;border:1px solid #000;text-align:center;font-weight:700;border-radius:5%;float:right;position:relative;right:20px;bottom:90px}
+.x-lbl{font-size:1em;font-weight:bolder;display:block;padding:.5em;margin-left:25em;margin-bottom:3em}
+.lbl:hover,.x-lbl:hover{color:#fff}
+#smellur{display:none}
+#smellur:checked~.popup{display:block}
+.lbl:hover{color:#ffe7d5}
+.form-col{display:grid;grid-template-columns:1fr}
+form div{padding:.2em}
+form{position:relative;bottom:50px}
+button{position:relative;left:180px}
+.about h2{padding-top:1em;font-size:2em;font-weight:700}
+.about p,.kisi p{font-size:1.3em}
+.slides{border:2px dashed #863d08;width:500px;height:500px;display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;margin-left:5em;margin-bottom:2em}
+.slides div{width:500px;height:500px;animation:slide 10s ease-in-out infinite alternate}
+@keyframes slide{
+0%,30%{transform:translate(0)}
+40%,70%{transform:translate(-500px)}
+100%,80%{transform:translate(-1000px)}
 }
-
-::selection {
-	/* Set background color for selected text */
-	background: var(--nc-ac-1);
-	color: var(--nc-ac-tx);
+.titill{display:none}
+.titill-lbl{display:block;padding:8px 22px;margin:0 0 1px 0;background:#cd5534;border-radius:3px;color:#000}
+.titill+.titill-lbl+.tab{display:none}
+.titill:checked+.titill-lbl+.tab{display:block}
+.tab-text{background-color:#fff;padding:8px 22px;margin:0 0 1px 0}
+.titill-lbl:hover{color:#fff}
+.col-7{display:grid;grid-template-columns:1fr;row-gap:2em}
+.accord{margin-bottom:2em}
+.kisi h2{font-size:2em;font-weight:700}
+.col-10,.col-11,.col-8,.col-9{display:grid;grid-template-columns:1fr;margin:3em}
+.col-10 img,.col-11 img,.col-8 img,.col-9 img{max-width:300px;border-radius:8px}
+.col-8{padding-top:5em}
+.col-11{padding-bottom:5em}
+@media screen and (max-width:600px){
+table{border:0;width:100%}
+table thead{border:none;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
+table tr{display:block;padding:.5rem;font-size:small}
+table td{display:block;text-align:right}
+table td::before{content:attr(data-label);float:left}
+table td:last-child{border-bottom:0}
+td,th{border-color:#fff}
+.kaffi{display:inline-block}
+.slides{width:200px;height:200px}
+.slides div{width:200px;height:200px}
+.slides img{width:200px;height:200px}
+@keyframes slide{
+0%,30%{transform:translate(0)}
+40%,70%{transform:translate(-200px)}
+100%,80%{transform:translate(-400px)}
 }
-
-h4,
-h5,
-h6 {
-	margin-bottom: .3rem;
+.popup{height:600px;width:350px;margin-top:50px}
+form div{padding:0}
+form{position:relative;bottom:50px}
+button{position:relative;left:140px}
+.x-lbl{margin-left:19em}
 }
-
-h3 {
-	font-size: 1.55rem;
+@media screen and (min-width:768px){
+header{max-height:50px;padding:2em}
+main{padding:0 8rem}
+.heim{font-size:5em;padding:3em}
+.col-1{display:grid;grid-template-columns:1fr 1fr;padding-top:8em}
+.col-2{display:grid;grid-template-columns:1fr 1fr;padding-top:2em}
+.stadur{position:relative;left:100px}
+.title{display:grid;grid-template-columns:1fr 1fr}
+.title h1{position:relative;left:200px}
+.klikk{display:none}
+.valmynd{display:grid;grid-template-columns:repeat(5,1fr);max-height:50px}
+.logoheim{max-width:25%;padding-left:20.5em;position:relative;bottom:300px}
+.logo{max-width:7%;position:relative;bottom:65px;right:15px}
+.col-3,.col-4,.col-5,.col-6{display:grid;grid-template-columns:1fr 1fr;text-align:center}
+.footer-col{grid-template-columns:1fr 1fr;padding-top:2em}
+.about p{display:grid;grid-template-columns:1fr 1fr}
+.accord{padding-left:5em;padding-right:5em}
+.col-10,.col-11,.col-8,.col-9{display:grid;grid-template-columns:1fr 1fr;margin-left:10em}
+.col-10 img,.col-11 img,.col-8 img,.col-9 img{max-width:400px}
 }
-
-h4 {
-	font-size: 1.25rem;
-}
-
-h5 {
-	font-size: 1rem;
-}
-
-h6 {
-	font-size: .875rem;
-}
-
-a {
-	color: var(--nc-lk-1);
-}
-
-a:hover {
-	color: var(--nc-lk-2);
-}
-
-abbr:hover {
-	/* Set the '?' cursor while hovering an abbreviation */
-	cursor: help;
-}
-
-blockquote {
-	padding: 1.5rem;
-	background: var(--nc-bg-2);
-	border-left: 5px solid var(--nc-bg-3);
-}
-
-abbr {
-	cursor: help;
-}
-
-blockquote *:last-child {
-	padding-bottom: 0;
-	margin-bottom: 0;
-}
-
-header {
-	background: #FFE7D5;
-    padding-bottom: 1.5em;
-}
-
-header > *:first-child {
-	margin-top: 0;
-	padding-top: 0;
-}
-
-header > *:last-child {
-	margin-bottom: 0;
-}
-
-a button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-	font-size: 1rem;
-	display: inline-block;
-	padding: 6px 12px;
-	text-align: center;
-	text-decoration: none;
-	white-space: nowrap;
-	background: var(--nc-lk-1);
-	color: var(--nc-lk-tx);
-	border: 0;
-	border-radius: 4px;
-	box-sizing: border-box;
-	cursor: pointer;
-	color: var(--nc-lk-tx);
-}
-
-a button[disabled],
-button[disabled],
-input[type="submit"][disabled],
-input[type="reset"][disabled],
-input[type="button"][disabled] {
-	cursor: default;
-	opacity: .5;
-
-	/* Set the [X] cursor while hovering a disabled link */
-	cursor: not-allowed;
-}
-
-.button:focus,
-.button:enabled:hover,
-button:focus,
-button:enabled:hover,
-input[type="submit"]:focus,
-input[type="submit"]:enabled:hover,
-input[type="reset"]:focus,
-input[type="reset"]:enabled:hover,
-input[type="button"]:focus,
-input[type="button"]:enabled:hover {
-	background: var(--nc-lk-2);
-}
-
-
-code,
-pre,
-kbd,
-samp {
-	/* Set the font family for monospaced elements */
-	font-family: var(--nc-font-mono);
-}
-
-code,
-samp,
-kbd,
-pre {
-	/* The main preformatted style. This is changed slightly across different cases. */
-	background: var(--nc-bg-2);
-	border: 1px solid var(--nc-bg-3);
-	border-radius: 4px;
-	padding: 3px 6px;
-	/* ↓ font-size is relative to containing element, so it scales for titles*/
-	font-size: 0.9em;
-}
-
-kbd {
-	/* Makes the kbd element look like a keyboard key */
-	border-bottom: 3px solid var(--nc-bg-3);
-}
-
-pre {
-	padding: 1rem 1.4rem;
-	max-width: 100%;
-	overflow: auto;
-}
-
-pre code {
-	/* When <code> is in a <pre>, reset it's formatting to blend in */
-	background: inherit;
-	font-size: inherit;
-	color: inherit;
-	border: 0;
-	padding: 0;
-	margin: 0;
-}
-
-code pre {
-	/* When <pre> is in a <code>, reset it's formatting to blend in */
-	display: inline;
-	background: inherit;
-	font-size: inherit;
-	color: inherit;
-	border: 0;
-	padding: 0;
-	margin: 0;
-}
-
-details {
-	/* Make the <details> look more "clickable" */
-	padding: .6rem 1rem;
-	background: var(--nc-bg-2);
-	border: 1px solid var(--nc-bg-3);
-	border-radius: 4px;
-}
-
-summary {
-	/* Makes the <summary> look more like a "clickable" link with the pointer cursor */
-	cursor: pointer;
-	font-weight: bold;
-}
-
-details[open] {
-	/* Adjust the <details> padding while open */
-	padding-bottom: .75rem;
-}
-
-details[open] summary {
-	/* Adjust the <details> padding while open */
-	margin-bottom: 6px;
-}
-
-details[open]>*:last-child {
-	/* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
-	margin-bottom: 0;
-}
-
-dt {
-	font-weight: bold;
-}
-
-dd::before {
-	/* Add an arrow to data table definitions */
-	content: '→ ';
-}
-
-fieldset {
-	margin-top: 1rem;
-	padding: 2rem;
-	border: 1px solid var(--nc-bg-3);
-	border-radius: 4px;
-}
-
-legend {
-	padding: auto .5rem;
-}
-
-table {
-	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
-	border-collapse: collapse;
-	width: 100%;
-	margin: auto;
-    position: relative;
-    bottom: 20px;
-}
-
-td,
-th {
-	border: 1px solid #FFE7D5;
-	text-align: left;
-	padding: .5rem;
-}
-
-th {
-	background: #FFE7D5;
-	color: #000;
-}
-
-tr:nth-child(even) {
-	/* Set every other cell slightly darker. Improves readability. */
-	background: #FFE7D5;
-	color: #000;
-}
-
-table caption {
-	font-weight: bold;
-	font-size: 1.3em;
-	margin-bottom: .5rem;
-}
-
-textarea {
-	/* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
-	max-width: 100%;
-}
-
-ol,
-ul {
-	/* Replace the browser default padding */
-	padding-left: 2rem;
-}
-
-li {
-	margin-top: .4rem;
-}
-
-ul ul,
-ol ul,
-ul ol,
-ol ol {
-	margin-bottom: 0;
-}
-
-mark {
-	padding: 3px 6px;
-	background: var(--nc-ac-1);
-	color: var(--nc-ac-tx);
-}
-
-textarea,
-select,
-input {
-	padding: 6px 12px;
-	margin-bottom: .5rem;
-	background: var(--nc-bg-2);
-	color: var(--nc-tx-2);
-	border: 1px solid var(--nc-bg-3);
-	border-radius: 4px;
-	box-shadow: none;
-	box-sizing: border-box;
+@media screen and (min-width:960px){
+.col-1 img,.col-2 img{position:relative;left:50px;bottom:70px;max-width:450px}
+.title h1{position:relative;right:400px}
+.logoheim{max-width:15%;padding-left:39em;position:relative;bottom:300px}
+.logo{max-width:7%;position:relative;bottom:80px}
+.col-3{display:grid;grid-template-columns:1fr 1fr 1fr}
+.col-7{display:grid;grid-template-columns:1fr 1fr;margin-left:5em}
 }
